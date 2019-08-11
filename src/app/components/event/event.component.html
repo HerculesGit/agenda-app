@@ -1,3 +1,24 @@
-<h1> {{value.time}} : {{value.location}} </h1>
-<p> Location: {{value.location}} </p>
-<p> Description: {{value.description}} </p>
+<div class="media">
+  <h3 class="h3-responsive font-weight-bld-mr"> {{value.time}}</h3>
+  <div class="media-body mb-3">
+
+    <!-- cria um 'menos' no final da linha -->
+    <mdb-badge danger="true" class="text-center float-right"></mdb-badge>
+    <h6 class="mt-0 font-weight-bold">{{value.subject}}</h6>
+    
+    <!-- hr sublinhado -->
+    <hr class="hr-bold mb-0 my-2" />
+    <p class="mb-0" *ngIf="value.location">
+      
+      <!-- coloca ícone seta -->
+      &#10148;
+      <mdb-icon fas icon="location-arrow"></mdb-icon>
+      {{ value.location }}
+    </p>
+  </div>
+</div>
+<p class="p-3 blue-grey lighten-5 blue-grey lighten-5" 
+  style="background-color: rgb(231, 231, 231)" 
+  *ngIf="value.description">
+  {{ value.description }}
+</p>
