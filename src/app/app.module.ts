@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { MatIconModule } from "@angular/material/icon";
+import { MatButtonModule } from "@angular/material/button";
 
 import { AppComponent } from './app.component';
 import { EventComponent } from './components/event/event.component';
@@ -10,7 +12,9 @@ import { EventComponent } from './components/event/event.component';
     EventComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],

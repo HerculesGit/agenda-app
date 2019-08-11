@@ -1,0 +1,17 @@
+.float-left {
+    color:crimson;
+}
+
+.float-left:hover {
+    cursor: pointer;
+}
+
+.flex-stretch {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.font-weight-bld-mr {
+    margin-right: 10px;
+}

@@ -13,4 +13,15 @@ export class AppComponent {
     {time: '09:00', subject: 'Call with HRs'},
     {time: '12:00', subject: 'Lunch with Timmoty', location: 'Canteen', description: 'Project evalutation ile declaring a variable and using an if statement is a fine way to conditionally render a component, sometimes you might want to use a'},
   ]
+
+  /**
+   * @param event - Passado como parâmetro no template, assim
+   * podemos verificar ele aqui dentro
+   */
+  deleteEvent(event: any) {
+    // procura se el (que está iterando dentro do array) é igual ao evento passado como parâmetro
+    const itemIndex = this.events.findIndex(el => el == event)
+    this.events.splice(itemIndex, 1)
+  }
+
 }

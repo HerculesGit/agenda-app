@@ -2,10 +2,12 @@
   <h3 class="h3-responsive font-weight-bld-mr"> {{value.time}}</h3>
   <div class="media-body mb-3">
 
-    <!-- cria um 'menos' no final da linha -->
-    <mdb-badge danger="true" class="text-center float-right"></mdb-badge>
-    <h6 class="mt-0 font-weight-bold">{{value.subject}}</h6>
-    
+    <div class="flex-stretch">
+      <!-- cria um 'menos' no final da linha -->
+      <mat-icon (click)="handleDeleteClick()" class="float-left">remove_circle</mat-icon>
+      <!-- <mdb-badge danger="true" class="text-center float-right">-</mdb-badge> -->
+      <h6 class="mt-0 font-weight-bold">{{value.subject}}</h6>
+  </div>
     <!-- hr sublinhado -->
     <hr class="hr-bold mb-0 my-2" />
     <p class="mb-0" *ngIf="value.location">
