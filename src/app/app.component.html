@@ -6,7 +6,7 @@
         <app-event [value]="event" (deleteEventInstanceEvent)="deleteEvent($event)"></app-event>
       </div>
       <div class="text-center">
-          <button mat-flat-button color="primary">Add Event</button>
+          <button (click)="showDialog = !showDialog" mat-flat-button color="primary">Add Event</button>
       </div>
     </div>
     
@@ -45,3 +45,10 @@
     </div>
   </div>
 </div>
+
+<!-- <button (click)="showDialog = !showDialog" class="btn">Open</button> -->
+
+<app-dialog [(visible)]="showDialog">
+	<h1>Add event in list</h1>
+	<button (click)="showDialog = !showDialog" class="btn">Close</button>
+</app-dialog>

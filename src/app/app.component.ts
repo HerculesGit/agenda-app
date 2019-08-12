@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatDialogModule } from "@angular/material/dialog";
+// import { ModalDialogComponent } from './components/modal-dialog/modal-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  // @ViewChild(MatDialogModule, {static: false}) modal: ModalDialogComponent;
 
   events: Array<any> = [
     {time: '08:00', subject: 'Breakfast with Simon', location: 'Lounge Caffe', description: 'Discuss Q3 targets'},

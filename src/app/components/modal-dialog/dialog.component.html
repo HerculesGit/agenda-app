@@ -1,0 +1,25 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+  
+  <!-- header -->
+  <div class="modal-header justify-center">
+    <h3>Schedule appointment</h3>
+  </div>
+
+  <!-- content - body -->
+  <div class="modal-content-left"> Modal Body </div>
+  <!-- footer -->
+  
+  <div class="modal-footer justify-center" >
+    <button mat-flat-button color="primary">ADD</button>
+  </div>
+  
+  <!-- <ng-content></ng-content> -->
+  
+  <!-- close button -->
+  <button mat-button *ngIf="closable" (click)="close()" aria-label="Close" class="dialog__close-btn">
+      <mat-icon>close</mat-icon>
+    </button>
+  
+  </div>
+  <div *ngIf="visible" class="overlay" (click)="close()">
+</div>
