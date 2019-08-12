@@ -6,9 +6,45 @@
   </div>
 
   <!-- content - body -->
-  <div class="modal-content-left"> Modal Body </div>
-  <!-- footer -->
+  <div class="modal-content-left">
+    <form class="form-column">
+
+      <div class="time">
+        <mat-icon>access_time</mat-icon>
+        <mat-form-field>
+            <input matInput placeholder="Time" value="">
+        </mat-form-field>
+      </div>
+      
+      <div class="subject">
+        <mat-icon>subject</mat-icon>
+        <mat-form-field>
+            <input matInput placeholder="Subject" value="">
+        </mat-form-field>
+      </div>
+      
+      <div class="location">
+        <mat-icon>location_on</mat-icon>
+        <mat-form-field>
+            <input matInput placeholder="Location" value="">
+        </mat-form-field>
+      </div>
+
+      <div class="description">
+        <mat-icon>description</mat-icon>
+        <mat-form-field>
+            <input matInput placeholder="Description (optional)" value="">
+        </mat-form-field>
+      </div>
+
+
+      <!-- <input [(ngModel)]="name" #ctrl="ngModel"/> -->
+    </form>
+    
+  </div>
   
+  
+  <!-- footer -->
   <div class="modal-footer justify-center" >
     <button mat-flat-button color="primary">ADD</button>
   </div>

@@ -48,9 +48,30 @@
 
 .justify-center {
     align-items: center;
-    background-color: violet
+    /* background-color: violet */
 }
 
 .modal-content-left {
     width: 100%;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    /* cima, direita, baixo, esquerda */
+    padding: 20px 10px 0px 20px
+}
+
+.form-column mat-form-field {
+    /* background-color: aqua; */
+    width: 100%
+}
+.form-column div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-column mat-icon{
+    padding-right: 2rem;
 }

@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatDialogModule } from "@angular/material/dialog";
-// import { ModalDialogComponent } from './components/modal-dialog/modal-dialog.component';
+import { DialogComponent } from './components/modal-dialog/dialog.component';
+import { FormControl } from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,13 @@ import { MatDialogModule } from "@angular/material/dialog";
 })
 export class AppComponent {
 
-  // @ViewChild(MatDialogModule, {static: false}) modal: ModalDialogComponent;
+  @ViewChild(DialogComponent, {static: false}) modal: DialogComponent;
+  name: string = ''
+
+  timeInput = new FormControl();
+  subjectInput = new FormControl()
+  locationInput = new FormControl()
+  descriptionInput = new FormControl()
 
   events: Array<any> = [
     {time: '08:00', subject: 'Breakfast with Simon', location: 'Lounge Caffe', description: 'Discuss Q3 targets'},
