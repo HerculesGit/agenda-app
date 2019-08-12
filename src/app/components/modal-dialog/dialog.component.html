@@ -7,46 +7,44 @@
 
   <!-- content - body -->
   <div class="modal-content-left">
-    <form class="form-column">
+    <form class="form-column" [formGroup]="formEvent" (ngSubmit)="onSubmit()">
 
       <div class="time">
         <mat-icon>access_time</mat-icon>
         <mat-form-field>
-            <input matInput placeholder="Time" value="">
+            <input matInput placeholder="Time" value="" formControlName="time">
         </mat-form-field>
       </div>
       
       <div class="subject">
         <mat-icon>subject</mat-icon>
         <mat-form-field>
-            <input matInput placeholder="Subject" value="">
+            <input matInput placeholder="Subject" value="" formControlName="subject">
         </mat-form-field>
       </div>
       
       <div class="location">
         <mat-icon>location_on</mat-icon>
         <mat-form-field>
-            <input matInput placeholder="Location" value="">
+            <input matInput placeholder="Location" value="" formControlName="location">
         </mat-form-field>
       </div>
 
       <div class="description">
         <mat-icon>description</mat-icon>
         <mat-form-field>
-            <input matInput placeholder="Description (optional)" value="">
+            <input matInput placeholder="Description (optional)" value="" formControlName="description">
         </mat-form-field>
       </div>
 
+      <!-- footer -->
+      <div class="modal-footer justify-center" >
+        <button mat-flat-button color="primary">ADD</button>
+      </div>
 
       <!-- <input [(ngModel)]="name" #ctrl="ngModel"/> -->
     </form>
     
-  </div>
-  
-  
-  <!-- footer -->
-  <div class="modal-footer justify-center" >
-    <button mat-flat-button color="primary">ADD</button>
   </div>
   
   <!-- <ng-content></ng-content> -->

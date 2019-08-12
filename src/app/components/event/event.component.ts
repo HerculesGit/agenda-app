@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-event',
@@ -13,7 +14,6 @@ export class EventComponent implements OnInit {
   
   @Output()
   deleteEventInstanceEvent: EventEmitter<any> = new EventEmitter<any>()
-
 
   constructor() { }
 
